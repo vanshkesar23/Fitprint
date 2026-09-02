@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ── DARK ESPRESSO LUXURY PALETTE ──────────────────────────────────────────
+   Primary Background:   #120E0C  (Very Deep Espresso Black)
+   Secondary Surface:   #1E1714  (Dark Chocolate Brown)
+   Card Background:      #2A201C  (Rich Dark Brown)
+   Elevated Surface:     #362720  (Warm Dark Mocha)
+   Primary Text:         #F5EFE8  (Warm Ivory)
+   Secondary Text:       #B9A99D  (Muted Warm Beige)
+   Luxury Gold Accent:   #C49A6C  (Gold Accent)
+   Warm Tan Accent:      #9C735D  (Warm Tan)
+
+   Controlled Colorful Tech Accents:
+   - Deep Electric Blue: #4A90A4
+   - Muted Cyan:         #66B8C9
+   - Warm Amber:         #D69A4D
+   - Burnt Orange:       #C96B3B
+   - Soft Red:           #B85C5C
+   - Muted Violet:       #7D6B9E
+─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --bg-primary: #120E0C;
+  --bg-secondary: #1E1714;
+  --surface-card: #2A201C;
+  --surface-elevated: #362720;
+  --color-primary: #F5EFE8;
+  --color-secondary: #B9A99D;
+  --color-gold: #C49A6C;
+  --color-tan: #9C735D;
+  --glass-bg: #2A201C;
+  --glass-border: rgba(196, 154, 108, 0.18);
+  --glass-border-hover: rgba(196, 154, 108, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: var(--color-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tan);
+}
+
+/* Rich Dark Brown Card */
+.glass-card {
+  background: #2A201C;
+  border: 1px solid rgba(196, 154, 108, 0.18);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(196, 154, 108, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(196, 154, 108, 0.2);
+}
+
+/* Gold Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #F5EFE8 0%, #C49A6C 50%, #9C735D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-vc {
+  background: linear-gradient(90deg, #F5EFE8 0%, #C49A6C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary Button - Warm Gold (#C49A6C → #9C735D) */
+.btn-primary {
+  background: linear-gradient(135deg, #C49A6C 0%, #9C735D 100%);
+  color: #120E0C;
+  border: 1px solid rgba(196, 154, 108, 0.4);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #F5EFE8 0%, #C49A6C 100%);
+  box-shadow: 0 8px 30px rgba(196, 154, 108, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button - Transparent Dark Brown */
+.btn-ghost {
+  background: #1E1714;
+  border: 1px solid rgba(196, 154, 108, 0.25);
+  color: #F5EFE8;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: #C49A6C;
+  background: #2A201C;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Input styles */
+.input-glass {
+  background: #1E1714;
+  border: 1px solid rgba(196, 154, 108, 0.25);
+  color: #F5EFE8;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-glass:focus {
+  border-color: #C49A6C;
+  box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.2);
+  background: #2A201C;
+}
+
+.input-glass::placeholder {
+  color: #B9A99D;
+}
+
+/* Animated background gradient - Deep Espresso */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 20% 20%, rgba(196, 154, 108, 0.12) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 80%, rgba(156, 115, 93, 0.08) 0%, transparent 50%),
+              #120E0C;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(196, 154, 108, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 154, 108, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid rgba(196, 154, 108, 0.3);
+  border-top: 2px solid #C49A6C;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scan animation */
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #66B8C9;
+  box-shadow: 0 0 15px rgba(102, 184, 201, 0.8);
+  animation: scan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar utility */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(196, 154, 108, 0.5);
+  border-radius: 2px;
+}
+
+/* Badge styles */
+.badge-neon {
+  background: rgba(196, 154, 108, 0.15);
+  border: 1px solid rgba(196, 154, 108, 0.35);
+  color: #F5EFE8;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 25px rgba(196, 154, 108, 0.3);
+}
