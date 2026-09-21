@@ -15,12 +15,12 @@ import FitAiAssistant from '@/components/FitAiAssistant';
 import SmoothScroll from '@/components/SmoothScroll';
 
 const features = [
-  { icon: Sparkles,  title: 'AI Fit Intelligence',       description: 'Compares your body profile against brand specific garment data for precision size recommendations.', color: '#0047FF' },
-  { icon: Shield,    title: 'Universal Fit Identity',     description: 'One FitPrint profile works intelligently across 50+ brands, no guesswork, no wrong sizes.',         color: '#6C63FF' },
-  { icon: Zap,       title: 'Instant Multi Analysis',     description: 'Get your personalized size recommendation in milliseconds, powered by real brand level size data.',     color: '#00D4FF' },
-  { icon: RefreshCw, title: 'Learns From You',            description: 'Post purchase feedback continuously improves your FitPrint. Every experience sharpens recommendations.', color: '#FFD700' },
-  { icon: BarChart3, title: 'Fit Confidence Score',       description: 'See confidence %, plus detailed chest, waist, and shoulder breakdowns for every recommendation.',       color: '#FF2D78' },
-  { icon: Star,      title: 'Two Ways to Create',         description: 'Enter measurements or let AI estimate from a photo. Both feed the same intelligent recommendation engine.', color: '#A8FF78' },
+  { icon: Sparkles, title: 'Your Fit Identity', description: 'One personal profile that translates into sizes across the brands you shop.', color: '#C49A6C' },
+  { icon: Shield, title: 'Brand-Aware Sizing', description: 'Recommendations use each brand’s own sizing system instead of assuming every M or L is the same.', color: '#8B6F47' },
+  { icon: Zap, title: 'Fast Recommendations', description: 'Go from your profile to a clear size recommendation without digging through size charts.', color: '#A05A42' },
+  { icon: RefreshCw, title: 'Learns From You', description: 'Purchase feedback can refine your FitPrint over time and make future recommendations more personal.', color: '#B08A5A' },
+  { icon: BarChart3, title: 'Fit Confidence', description: 'See the recommended size alongside a confidence score and measurement breakdown.', color: '#C49A6C' },
+  { icon: Star, title: 'Two Ways to Create', description: 'Build your profile manually or use the body-analysis flow when you want a faster start.', color: '#8B6F47' },
 ];
 
 const stats = [
@@ -31,10 +31,10 @@ const stats = [
 ];
 
 const stages = [
-  { number: '01', title: 'YOUR BODY', desc: 'Enter body measurements or upload a photo to capture exact physical dimensions.', color: '#0047FF' },
-  { number: '02', title: 'YOUR FITPRINT', desc: 'Body measurements convert into a universal digital Fit Identity (e.g. FP-8294).', color: '#6C63FF' },
-  { number: '03', title: 'BRAND INTELLIGENCE', desc: 'FitPrint algorithms match your profile against brand-specific garment data.', color: '#00D4FF' },
-  { number: '04', title: 'THE RIGHT FIT', desc: 'Get your exact size recommendation with confidence breakdown per brand.', color: '#FFD700' },
+  { number: '01', title: 'YOUR BODY', desc: 'Enter body measurements or upload a photo to capture exact physical dimensions.', color: '#C49A6C' },
+  { number: '02', title: 'YOUR FITPRINT', desc: 'Body measurements convert into a universal digital Fit Identity (e.g. FP-8294).', color: '#C49A6C' },
+  { number: '03', title: 'BRAND INTELLIGENCE', desc: 'FitPrint algorithms match your profile against brand-specific garment data.', color: '#C49A6C' },
+  { number: '04', title: 'THE RIGHT FIT', desc: 'Get your exact size recommendation with confidence breakdown per brand.', color: '#C49A6C' },
 ];
 
 const headlineWords = ['ONE BODY.', 'EVERY BRAND.', 'THE RIGHT FIT.'];
@@ -73,7 +73,7 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full mb-8 bg-[#1E1714] border border-[#C49A6C]/35 text-[#F5EFE8]"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#C49A6C]" />
-                <span className="text-xs font-mono font-bold tracking-widest uppercase">Universal Fit Intelligence Platform</span>
+                <span className="text-xs font-mono font-bold tracking-widest uppercase">PERSONAL SIZING, WITHOUT THE GUESSWORK</span>
               </motion.div>
 
               {/* Bold Headline */}
@@ -89,7 +89,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-[#B9A99D] text-lg md:text-xl leading-relaxed mb-10 max-w-lg"
               >
-                FitPrint creates your personal Fit Identity and translates it into the right clothing size across 50 popular brands, powered by AI and real garment data.
+                FitPrint creates one personal size profile and translates it into the right size across the brands you shop.
               </motion.p>
 
               <motion.div
@@ -108,7 +108,7 @@ export default function HomePage() {
                   href="/compare"
                   className="btn-ghost inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-xs font-semibold tracking-wider"
                 >
-                  Compare 50 Brands Live
+                  Compare Brands
                 </Link>
               </motion.div>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
                 className="flex items-center gap-4 border-t border-[#C49A6C]/20 pt-6"
               >
                 <div className="flex -space-x-2">
-                  {['#C49A6C','#9C735D','#4A90A4','#66B8C9','#7D6B9E'].map((color, i) => (
+                  {['#C49A6C','#9C735D','#A05A42','#8B6F47','#8B6F47'].map((color, i) => (
                     <div key={i} className="w-8 h-8 rounded-full border-2 flex items-center justify-center text-xs font-bold text-[#120E0C]"
                       style={{ background: color, borderColor: '#120E0C' }}>
                       {String.fromCharCode(65 + i)}
@@ -128,7 +128,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-xs text-[#B9A99D]">
-                  <strong className="text-[#F5EFE8] font-semibold">50,000+ Fit Identity profiles</strong> created in beta
+                  <strong className="text-[#F5EFE8] font-semibold">Your FitPrint profile</strong> created in beta
                 </p>
               </motion.div>
             </div>
@@ -173,8 +173,8 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
               {[
                 { number: '01', title: 'CREATE YOUR FITPRINT', desc: 'Create your personalized body and fit profile.', color: '#D69A4D' },
-                { number: '02', title: 'FITPRINT ANALYZES YOU', desc: 'Analyze body measurements, proportions and fit preferences.', color: '#66B8C9' },
-                { number: '03', title: 'COMPARE WITH BRANDS', desc: 'FitPrint compares your profile with different brand sizing systems.', color: '#7D6B9E' },
+                { number: '02', title: 'FITPRINT ANALYZES YOU', desc: 'Analyze body measurements, proportions and fit preferences.', color: '#8B6F47' },
+                { number: '03', title: 'COMPARE WITH BRANDS', desc: 'FitPrint compares your profile with different brand sizing systems.', color: '#8B6F47' },
                 { number: '04', title: 'GET YOUR PERFECT SIZE', desc: 'Receive personalized size recommendations with confidence scores.', color: '#C49A6C' },
               ].map((stg, i) => (
                 <motion.div
@@ -281,27 +281,27 @@ export default function HomePage() {
               >
                 <TiltCard strength={10} className="h-full">
                   <Link href="/ai-analysis" className="block h-full">
-                    <div className="relative h-full rounded-2xl p-8 transition-all duration-300 glass-card bg-[#2A201C] border border-[rgba(196,154,108,0.25)] hover:border-[#66B8C9]">
-                      <div className="w-14 h-14 rounded-xl bg-[#1E1714] border border-[#66B8C9]/40 flex items-center justify-center mb-6">
-                        <Camera className="w-7 h-7 text-[#66B8C9]" />
+                    <div className="relative h-full rounded-2xl p-8 transition-all duration-300 glass-card bg-[#2A201C] border border-[rgba(196,154,108,0.25)] hover:border-[#8B6F47]">
+                      <div className="w-14 h-14 rounded-xl bg-[#1E1714] border border-[#8B6F47]/40 flex items-center justify-center mb-6">
+                        <Camera className="w-7 h-7 text-[#8B6F47]" />
                       </div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="w-2 h-2 rounded-full bg-[#66B8C9] animate-pulse" />
-                        <span className="text-[#66B8C9] text-xs font-mono font-bold tracking-widest uppercase">Method 02 · Live AI</span>
+                        <span className="w-2 h-2 rounded-full bg-[#8B6F47] animate-pulse" />
+                        <span className="text-[#8B6F47] text-xs font-mono font-bold tracking-widest uppercase">Method 02 · Body Analysis</span>
                       </div>
-                      <h3 className="font-display font-black text-3xl text-[#F5EFE8] mb-3">AI Live Body Scan</h3>
+                      <h3 className="font-display font-black text-3xl text-[#F5EFE8] mb-3">Body Analysis</h3>
                       <p className="text-[#B9A99D] text-sm leading-relaxed mb-6">
                         Live camera scanning estimates body proportions. Fast, frictionless, and completely private.
                       </p>
                       <ul className="space-y-2 mb-6">
                         {['Live camera landmark scan', 'Computer vision proportion mapping', 'Instant proportion analysis', 'Zero photo storage guarantee'].map(f => (
                           <li key={f} className="flex items-center gap-2.5 text-xs text-[#F5EFE8]">
-                            <CheckCircle className="w-4 h-4 text-[#66B8C9] flex-shrink-0" /> {f}
+                            <CheckCircle className="w-4 h-4 text-[#8B6F47] flex-shrink-0" /> {f}
                           </li>
                         ))}
                       </ul>
                       <div className="btn-ghost inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
-                        Start Live Body Scan →
+                        Start Body Analysis →
                       </div>
                     </div>
                   </Link>
@@ -318,13 +318,13 @@ export default function HomePage() {
         <section className="py-28 bg-[#1E1714] border-y border-[#C49A6C]/20">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C49A6C]/30 bg-[#2A201C] text-[#C49A6C] text-xs font-mono font-bold tracking-widest uppercase mb-4">
-              <Globe className="w-3.5 h-3.5" /> Scalable Fit Intelligence Architecture
+              <Globe className="w-3.5 h-3.5" /> ONE PROFILE. MANY BRANDS.
             </div>
             <h2 className="font-display font-black text-4xl md:text-5xl text-[#F5EFE8] mb-4 uppercase">
-              Today, 50 Brands. Tomorrow, Every Wardrobe.
+              Your size stays yours. The label changes.
             </h2>
             <p className="text-[#B9A99D] text-base max-w-xl mx-auto mb-10 leading-relaxed">
-              FitPrint is built on a scalable fit intelligence engine. New brands can be integrated through structured size data and future API partnerships without changing a user's FitPrint.
+              FitPrint keeps your personal fit profile consistent while translating it into the sizing language of each brand.
             </p>
 
             <div className="flex items-center justify-center gap-3 sm:gap-6 font-mono text-xs font-bold text-[#F5EFE8] flex-wrap">
@@ -336,7 +336,7 @@ export default function HomePage() {
               <span className="text-[#C49A6C]">→</span>
               <span className="px-4 py-2 rounded-lg bg-[#9C735D] text-white">50+ BRANDS</span>
               <span className="text-[#C49A6C]">→</span>
-              <span className="px-4 py-2 rounded-lg bg-[#4A90A4] text-white">PERSONALIZED FIT</span>
+              <span className="px-4 py-2 rounded-lg bg-[#A05A42] text-white">PERSONALIZED FIT</span>
             </div>
           </div>
         </section>
@@ -355,10 +355,10 @@ export default function HomePage() {
                 <Sparkles className="w-3.5 h-3.5" /> Platform Capabilities
               </div>
               <h2 className="font-display font-black text-5xl md:text-6xl text-[#F5EFE8] mb-4">
-                Built for the <span className="gradient-text">Future of Fashion</span>
+                Made for the way you shop
               </h2>
               <p className="text-[#B9A99D] text-lg max-w-xl mx-auto">
-                FitPrint doesn't sell clothes. It makes any brand's sizing work perfectly for you.
+                One profile. Different brands. A clearer way to shop.
               </p>
             </motion.div>
 
