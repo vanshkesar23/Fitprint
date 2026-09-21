@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 const brands = [
   { name: 'H&M',         abbr: 'H&M', size: 'M',  angle: 0,   color: '#D69A4D', note: 'True to Size' },
-  { name: 'Zara',        abbr: 'ZR',  size: 'L',  angle: 72,  color: '#66B8C9', note: 'Runs Small' },
-  { name: 'Nova Studio', abbr: 'NS',  size: 'M',  angle: 144, color: '#7D6B9E', note: 'Standard EU' },
-  { name: 'Axiom Wear',  abbr: 'AX',  size: 'L',  angle: 216, color: '#C96B3B', note: 'Runs Large' },
-  { name: 'Solace',      abbr: 'SL',  size: 'XL', angle: 288, color: '#C49A6C', note: 'Slim Fit' },
+  { name: 'Zara',        abbr: 'ZR',  size: 'L',  angle: 72,  color: '#8B6F47', note: 'Runs Small' },
+  { name: 'Uniqlo', abbr: 'UQ', size: 'M', angle: 144, color: '#8B6F47', note: 'Relaxed Fit' },
+  { name: 'Nike', abbr: 'NK', size: 'L', angle: 216, color: '#A05A42', note: 'Athletic Fit' },
+  { name: 'Levi’s', abbr: 'LV', size: '32', angle: 288, color: '#B08A5A', note: 'Denim Fit' },
 ];
 
 export default function BrandComparison() {
@@ -185,13 +185,13 @@ export default function BrandComparison() {
       ctx!.fillStyle = '#F5EFE8';
       ctx!.font = 'bold 18px "Outfit",sans-serif';
       ctx!.shadowBlur = 10; ctx!.shadowColor = '#C49A6C';
-      ctx!.fillText('AI', cx, cy + 8);
+      ctx!.fillText('FIT', cx, cy + 8);
       ctx!.shadowBlur = 0;
 
       // ── SCANLINE ────────────────────────────────────────────────────────
       const scanY = ((t * 1.5) % (H + 40)) - 20;
       ctx!.globalAlpha = 0.05;
-      ctx!.fillStyle = '#66B8C9';
+      ctx!.fillStyle = '#8B6F47';
       ctx!.fillRect(0, scanY, W, 2);
       ctx!.globalAlpha = 1;
 
@@ -223,7 +223,7 @@ export default function BrandComparison() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C49A6C]/30 bg-[#2A201C] text-[#C49A6C] text-xs font-mono font-bold tracking-widest uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C49A6C] animate-pulse" />
-            Core Value Demonstration
+            FITPRINT SIZE GUIDE
           </div>
           <h2 className="font-display font-black text-5xl md:text-6xl text-[#F5EFE8] mb-4 uppercase">
             Same You. <span className="gradient-text">Different Sizes.</span>
@@ -231,8 +231,7 @@ export default function BrandComparison() {
             <span className="text-[#B9A99D] text-4xl">Finally Explained.</span>
           </h2>
           <p className="text-[#B9A99D] text-lg max-w-2xl mx-auto leading-relaxed">
-            Your FitPrint ID is the universal key. FitPrint compares your profile against each
-            brand's unique size chart data and tells you exactly what to order.
+            Your FitPrint profile stays the same. Brand sizing changes. See the size that fits your profile before you buy.
           </p>
         </motion.div>
 
@@ -309,7 +308,7 @@ export default function BrandComparison() {
               className="pt-4"
             >
               <Link href="/compare" className="btn-primary w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-xs uppercase tracking-wider">
-                Compare H&M vs Zara Live →
+                Compare Brands →
               </Link>
             </motion.div>
           </div>
