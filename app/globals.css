@@ -4,34 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
-/* ── DARK ESPRESSO LUXURY PALETTE ──────────────────────────────────────────
-   Primary Background:   #120E0C  (Very Deep Espresso Black)
-   Secondary Surface:   #1E1714  (Dark Chocolate Brown)
-   Card Background:      #2A201C  (Rich Dark Brown)
-   Elevated Surface:     #362720  (Warm Dark Mocha)
-   Primary Text:         #F5EFE8  (Warm Ivory)
-   Secondary Text:       #B9A99D  (Muted Warm Beige)
-   Luxury Gold Accent:   #C49A6C  (Gold Accent)
-   Warm Tan Accent:      #9C735D  (Warm Tan)
-
-   Controlled Colorful Tech Accents:
-   - Deep Electric Blue: #4A90A4
-   - Muted Cyan:         #66B8C9
-   - Warm Amber:         #D69A4D
-   - Burnt Orange:       #C96B3B
-   - Soft Red:           #B85C5C
-   - Muted Violet:       #7D6B9E
-─────────────────────────────────────────────────────────────────────────── */
+/* FitPrint — editorial fashion system */
 
 :root {
   --bg-primary: #120E0C;
-  --bg-secondary: #1E1714;
-  --surface-card: #2A201C;
-  --surface-elevated: #362720;
+  --bg-secondary: #1C1714;
+  --surface-card: #26201C;
+  --surface-elevated: #332923;
   --color-primary: #F5EFE8;
   --color-secondary: #B9A99D;
   --color-gold: #C49A6C;
-  --color-tan: #9C735D;
+  --color-tan: #8B6F47;
   --glass-bg: #2A201C;
   --glass-border: rgba(196, 154, 108, 0.18);
   --glass-border-hover: rgba(196, 154, 108, 0.5);
@@ -229,3 +212,15 @@ h1, h2, h3, h4, h5 {
 .shadow-glow {
   box-shadow: 0 0 25px rgba(196, 154, 108, 0.3);
 }
+
+
+/* Editorial fashion polish */
+::selection { background: #C49A6C; color: #120E0C; }
+a { text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.glass-card { border-radius: 1rem; box-shadow: 0 10px 35px rgba(0,0,0,.28); }
+.glass-card:hover { box-shadow: 0 18px 45px rgba(0,0,0,.38); }
+.btn-primary { background: #C49A6C; color: #120E0C; box-shadow: none; border-radius: .65rem; }
+.btn-primary:hover { background: #E1C39A; box-shadow: 0 8px 24px rgba(196,154,108,.22); }
+.btn-ghost { background: transparent; border-color: rgba(245,239,232,.25); }
+.btn-ghost:hover { background: #26201C; border-color: #C49A6C; }
