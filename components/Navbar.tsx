@@ -4,16 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Zap, LogOut, User, ChevronDown } from 'lucide-react';
+import { Menu, X, LogOut, User, ChevronDown } from 'lucide-react';
 import { useFitPrint } from '@/lib/context';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Create FitPrint', href: '/create' },
-  { label: 'Compare Brands', href: '/compare' },
-  { label: 'Brand Library', href: '/brands' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Try Demo', href: '/demo' },
+  { label: 'Create', href: '/create' },
+  { label: 'Compare', href: '/compare' },
+  { label: 'Brands', href: '/brands' },
+  { label: 'How It Works', href: '/#how-it-works' },
 ];
 
 export default function Navbar() {
@@ -60,8 +59,8 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C49A6C] to-[#9C735D] flex items-center justify-center shadow-glow transition-transform group-hover:scale-105">
-              <Zap className="w-4 h-4 text-[#120E0C]" />
+            <div className="w-8 h-8 rounded-lg bg-[#C49A6C] flex items-center justify-center transition-transform group-hover:scale-105">
+              <span className="text-[#120E0C] font-black text-sm">FP</span>
             </div>
             <span className="font-display font-black tracking-tight text-lg text-[#F5EFE8] uppercase">
               Fit<span className="text-[#C49A6C]">Print</span>
