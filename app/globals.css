@@ -320,6 +320,10 @@ main > div > section:first-child .btn-ghost:hover {
 }
 .gradient-text {
   background: linear-gradient(110deg, #f6e9da 0%, #d3a879 50%, #a97855 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Respect reduced-motion preferences and avoid oversized canvas on phones */
