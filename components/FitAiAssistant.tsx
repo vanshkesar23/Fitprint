@@ -225,7 +225,7 @@ export default function FitAiAssistant() {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
-              className="px-3.5 py-1.5 rounded-full bg-[#1E1714] border border-[#C49A6C]/40 text-[#F5EFE8] font-mono text-xs font-semibold tracking-wider shadow-xl hidden sm:block pointer-events-none"
+              className="px-3.5 py-1.5 rounded-full bg-[#F4F2EE] border border-[#111111]/40 text-[#111111] font-mono text-xs font-semibold tracking-wider shadow-xl hidden sm:block pointer-events-none"
             >
               Ask FIT AI
             </motion.div>
@@ -236,12 +236,12 @@ export default function FitAiAssistant() {
         <button
           type="button"
           onClick={() => setIsOpen(v => !v)}
-          className="relative flex items-center gap-2.5 px-4 py-3 rounded-full shadow-2xl transition-all duration-300 cursor-pointer group hover:scale-105 active:scale-95 bg-gradient-to-r from-[#C49A6C] to-[#9C735D] border border-[#C49A6C]"
+          className="relative flex items-center gap-2.5 px-4 py-3 rounded-full shadow-2xl transition-all duration-300 cursor-pointer group hover:scale-105 active:scale-95 bg-gradient-to-r from-[#111111] to-[#777777] border border-[#111111]"
         >
           <div className="relative w-5 h-5 flex items-center justify-center">
-            <Sparkles className="w-4 h-4 text-[#120E0C]" />
+            <Sparkles className="w-4 h-4 text-[#FFFFFF]" />
           </div>
-          <span className="font-display font-black text-[#120E0C] text-xs tracking-wider uppercase pr-1">
+          <span className="font-display font-black text-[#FFFFFF] text-xs tracking-wider uppercase pr-1">
             {isOpen ? 'Close' : 'FIT AI'}
           </span>
         </button>
@@ -255,22 +255,22 @@ export default function FitAiAssistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-24 right-4 sm:right-6 z-[9999] w-[94vw] sm:w-[420px] h-[560px] rounded-2xl flex flex-col overflow-hidden shadow-2xl border border-[rgba(196,154,108,0.25)] bg-[#1E1714] pointer-events-auto text-[#F5EFE8]"
+            className="fixed bottom-24 right-4 sm:right-6 z-[9999] w-[94vw] sm:w-[420px] h-[560px] rounded-2xl flex flex-col overflow-hidden shadow-2xl border border-[rgba(0,0,0,0.25)] bg-[#F4F2EE] pointer-events-auto text-[#111111]"
           >
             {/* Header */}
-            <div className="p-4 border-b border-[rgba(196,154,108,0.2)] flex items-center justify-between bg-[#2A201C] text-[#F5EFE8]">
+            <div className="p-4 border-b border-[rgba(0,0,0,0.2)] flex items-center justify-between bg-[#FFFFFF] text-[#111111]">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#C49A6C] to-[#9C735D] flex items-center justify-center shadow-glow">
-                  <Bot className="w-5 h-5 text-[#120E0C]" />
+                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#111111] to-[#777777] flex items-center justify-center shadow-glow">
+                  <Bot className="w-5 h-5 text-[#FFFFFF]" />
                 </div>
                 <div>
-                  <div className="font-display font-bold text-[#F5EFE8] text-sm flex items-center gap-2">
+                  <div className="font-display font-bold text-[#111111] text-sm flex items-center gap-2">
                     FIT AI
                     <span className="flex items-center gap-1 text-[10px] font-mono text-cyan-300 bg-cyan-950/60 px-2 py-0.5 rounded-full border border-cyan-500/40">
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" /> Online
                     </span>
                   </div>
-                  <div className="text-[#B9A99D] text-[10px] font-mono">Your Personal Fit Assistant</div>
+                  <div className="text-[#5C5C5C] text-[10px] font-mono">Your Personal Fit Assistant</div>
                 </div>
               </div>
 

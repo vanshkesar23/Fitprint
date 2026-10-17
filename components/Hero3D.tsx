@@ -23,7 +23,7 @@ export default function Hero3D() {
     let t = 0;
 
     // ── PARTICLE FIELD ────────────────────────────────────────────────────────
-    const COLORS = ['#4A90A4', '#66B8C9', '#D69A4D', '#C96B3B', '#7D6B9E', '#C49A6C'];
+    const COLORS = ['#4A90A4', '#66B8C9', '#111111', '#C96B3B', '#7D6B9E', '#111111'];
     interface Particle {
       x: number; y: number; vx: number; vy: number;
       r: number; color: string; alpha: number; life: number;
@@ -40,8 +40,8 @@ export default function Hero3D() {
     // ── DATA NODES ────────────────────────────────────────────────────────────
     const nodes = [
       { label: 'Chest: 98cm',   angle: -30, radius: 200, color: '#66B8C9', dotR: 3.5 },
-      { label: 'Waist: 82cm',   angle: 20,  radius: 195, color: '#D69A4D', dotR: 3.5 },
-      { label: 'Shoulders: 46cm', angle: -90, radius: 210, color: '#C49A6C', dotR: 3.5 },
+      { label: 'Waist: 82cm',   angle: 20,  radius: 195, color: '#111111', dotR: 3.5 },
+      { label: 'Shoulders: 46cm', angle: -90, radius: 210, color: '#111111', dotR: 3.5 },
       { label: 'Hips: 100cm',   angle: 60,  radius: 200, color: '#7D6B9E', dotR: 3.5 },
     ];
 
@@ -49,8 +49,8 @@ export default function Hero3D() {
     const badges = [
       { label: 'XS', ang: 0,   r: 170, color: '#4A90A4' },
       { label: 'S',  ang: 72,  r: 188, color: '#66B8C9' },
-      { label: 'M',  ang: 144, r: 175, color: '#C49A6C' },
-      { label: 'L',  ang: 216, r: 185, color: '#D69A4D' },
+      { label: 'M',  ang: 144, r: 175, color: '#111111' },
+      { label: 'L',  ang: 216, r: 185, color: '#111111' },
       { label: 'XL', ang: 288, r: 172, color: '#C96B3B' },
     ];
 

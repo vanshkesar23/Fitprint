@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 
 const brands = [
-  { name: 'H&M',         abbr: 'H&M', size: 'M',  angle: 0,   color: '#D69A4D', note: 'True to Size' },
-  { name: 'Zara',        abbr: 'ZR',  size: 'L',  angle: 72,  color: '#8B6F47', note: 'Runs Small' },
-  { name: 'Uniqlo', abbr: 'UQ', size: 'M', angle: 144, color: '#8B6F47', note: 'Relaxed Fit' },
-  { name: 'Nike', abbr: 'NK', size: 'L', angle: 216, color: '#A05A42', note: 'Athletic Fit' },
+  { name: 'H&M',         abbr: 'H&M', size: 'M',  angle: 0,   color: '#111111', note: 'True to Size' },
+  { name: 'Zara',        abbr: 'ZR',  size: 'L',  angle: 72,  color: '#555555', note: 'Runs Small' },
+  { name: 'Uniqlo', abbr: 'UQ', size: 'M', angle: 144, color: '#555555', note: 'Relaxed Fit' },
+  { name: 'Nike', abbr: 'NK', size: 'L', angle: 216, color: '#333333', note: 'Athletic Fit' },
   { name: 'Levi’s', abbr: 'LV', size: '32', angle: 288, color: '#B08A5A', note: 'Denim Fit' },
 ];
 
@@ -47,7 +47,7 @@ export default function BrandComparison() {
       [R * 0.35, R * 0.65, R, R * 1.25].forEach((r, i) => {
         ctx!.beginPath();
         ctx!.arc(cx, cy, r, 0, Math.PI * 2);
-        ctx!.strokeStyle = `rgba(196,154,108,${0.06 + i * 0.02})`;
+        ctx!.strokeStyle = `rgba(0,0,0,${0.06 + i * 0.02})`;
         ctx!.lineWidth = 1;
         ctx!.setLineDash([i % 2 ? 5 : 0, i % 2 ? 7 : 0]);
         ctx!.stroke();
@@ -60,7 +60,7 @@ export default function BrandComparison() {
         ctx!.beginPath();
         ctx!.moveTo(cx, cy);
         ctx!.lineTo(cx + Math.cos(ar) * R * 1.25, cy + Math.sin(ar) * R * 1.25);
-        ctx!.strokeStyle = 'rgba(196,154,108,0.04)';
+        ctx!.strokeStyle = 'rgba(0,0,0,0.04)';
         ctx!.lineWidth = 1;
         ctx!.stroke();
       }
@@ -84,7 +84,7 @@ export default function BrandComparison() {
         // Connector beam
         const beamAlpha = 0.08 + Math.sin(t * 0.04 + i) * 0.04;
         const lg = ctx!.createLinearGradient(cx, cy, bx, by);
-        lg.addColorStop(0, `rgba(196,154,108,${beamAlpha * 4})`);
+        lg.addColorStop(0, `rgba(0,0,0,${beamAlpha * 4})`);
         lg.addColorStop(1, `rgba(${rgb},${beamAlpha})`);
         ctx!.beginPath(); ctx!.moveTo(cx, cy); ctx!.lineTo(bx, by);
         ctx!.strokeStyle = lg; ctx!.lineWidth = 1.5; ctx!.stroke();
@@ -132,7 +132,7 @@ export default function BrandComparison() {
         ctx!.shadowBlur = 6; ctx!.shadowColor = brand.color;
         ctx!.fillText(brand.abbr, bx, by - 8);
         ctx!.shadowBlur = 0;
-        ctx!.fillStyle = '#F5EFE8';
+        ctx!.fillStyle = '#111111';
         ctx!.font = `bold 16px "Outfit",sans-serif`;
         ctx!.fillText(brand.size, bx, by + 8);
       });
@@ -147,14 +147,14 @@ export default function BrandComparison() {
         const rAlpha = Math.max(0, 0.18 - rOffset / 80 * 0.18);
         ctx!.beginPath();
         ctx!.arc(cx, cy, cR + rOffset, 0, Math.PI * 2);
-        ctx!.strokeStyle = `rgba(196,154,108,${rAlpha})`;
+        ctx!.strokeStyle = `rgba(0,0,0,${rAlpha})`;
         ctx!.lineWidth = 2;
         ctx!.stroke();
       });
 
       // Core glow
       const cg = ctx!.createRadialGradient(cx - 15, cy - 15, 0, cx, cy, cR * 2);
-      cg.addColorStop(0, 'rgba(196,154,108,0.6)');
+      cg.addColorStop(0, 'rgba(0,0,0,0.6)');
       cg.addColorStop(0.4, 'rgba(102,184,201,0.25)');
       cg.addColorStop(1, 'transparent');
       ctx!.fillStyle = cg;
@@ -162,13 +162,13 @@ export default function BrandComparison() {
 
       // Core disk gradient
       const coreDisk = ctx!.createRadialGradient(cx - cR * 0.35, cy - cR * 0.35, 0, cx, cy, cR);
-      coreDisk.addColorStop(0, 'rgba(196,154,108,0.9)');
-      coreDisk.addColorStop(0.5, 'rgba(156,115,93,0.7)');
+      coreDisk.addColorStop(0, 'rgba(0,0,0,0.9)');
+      coreDisk.addColorStop(0.5, 'rgba(0,0,0,0.7)');
       coreDisk.addColorStop(1, 'rgba(102,184,201,0.4)');
       ctx!.beginPath(); ctx!.arc(cx, cy, cR, 0, Math.PI * 2);
       ctx!.fillStyle = coreDisk; ctx!.fill();
       ctx!.strokeStyle = 'rgba(245,239,232,0.9)'; ctx!.lineWidth = 1.5;
-      ctx!.shadowBlur = 20; ctx!.shadowColor = '#C49A6C'; ctx!.stroke(); ctx!.shadowBlur = 0;
+      ctx!.shadowBlur = 20; ctx!.shadowColor = '#111111'; ctx!.stroke(); ctx!.shadowBlur = 0;
 
       // Shimmer overlay
       const shimmer = ctx!.createLinearGradient(cx - cR, cy - cR, cx + cR, cy + cR * 0.6);
@@ -182,16 +182,16 @@ export default function BrandComparison() {
       ctx!.fillStyle = 'rgba(245,239,232,0.7)';
       ctx!.font = '10px "Outfit",sans-serif';
       ctx!.fillText('FitPrint', cx, cy - 11);
-      ctx!.fillStyle = '#F5EFE8';
+      ctx!.fillStyle = '#111111';
       ctx!.font = 'bold 18px "Outfit",sans-serif';
-      ctx!.shadowBlur = 10; ctx!.shadowColor = '#C49A6C';
+      ctx!.shadowBlur = 10; ctx!.shadowColor = '#111111';
       ctx!.fillText('FIT', cx, cy + 8);
       ctx!.shadowBlur = 0;
 
       // ── SCANLINE ────────────────────────────────────────────────────────
       const scanY = ((t * 1.5) % (H + 40)) - 20;
       ctx!.globalAlpha = 0.05;
-      ctx!.fillStyle = '#8B6F47';
+      ctx!.fillStyle = '#555555';
       ctx!.fillRect(0, scanY, W, 2);
       ctx!.globalAlpha = 1;
 
@@ -212,7 +212,7 @@ export default function BrandComparison() {
   }, [mounted, inView]);
 
   return (
-    <section id="brand-comparison" className="py-32 relative overflow-hidden bg-[#1E1714]" ref={sectionRef}>
+    <section id="brand-comparison" className="py-32 relative overflow-hidden bg-[#F4F2EE]" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -221,16 +221,16 @@ export default function BrandComparison() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C49A6C]/30 bg-[#2A201C] text-[#C49A6C] text-xs font-mono font-bold tracking-widest uppercase mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C49A6C] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#111111]/30 bg-[#FFFFFF] text-[#111111] text-xs font-mono font-bold tracking-widest uppercase mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#111111] animate-pulse" />
             FITPRINT SIZE GUIDE
           </div>
-          <h2 className="font-display font-black text-5xl md:text-6xl text-[#F5EFE8] mb-4 uppercase">
+          <h2 className="font-display font-black text-5xl md:text-6xl text-[#111111] mb-4 uppercase">
             Same You. <span className="gradient-text">Different Sizes.</span>
             <br />
-            <span className="text-[#B9A99D] text-4xl">Finally Explained.</span>
+            <span className="text-[#5C5C5C] text-4xl">Finally Explained.</span>
           </h2>
-          <p className="text-[#B9A99D] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#5C5C5C] text-lg max-w-2xl mx-auto leading-relaxed">
             Your FitPrint profile stays the same. Brand sizing changes. See the size that fits your profile before you buy.
           </p>
         </motion.div>
@@ -257,7 +257,7 @@ export default function BrandComparison() {
             <motion.p
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              className="text-[#B9A99D] text-xs font-mono font-bold tracking-widest uppercase mb-5"
+              className="text-[#5C5C5C] text-xs font-mono font-bold tracking-widest uppercase mb-5"
             >
               YOUR FITPRINT → EACH BRAND'S RECOMMENDED SIZE
             </motion.p>
@@ -269,7 +269,7 @@ export default function BrandComparison() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                 className="glass-card rounded-2xl p-4 flex items-center justify-between group hover:-translate-y-0.5"
-                style={{ background: '#2A201C', borderColor: 'rgba(196, 154, 108, 0.2)' }}
+                style={{ background: '#FFFFFF', borderColor: 'rgba(0, 0, 0, 0.2)' }}
               >
                 <div className="flex items-center gap-3">
                   <div
@@ -279,13 +279,13 @@ export default function BrandComparison() {
                     {brand.abbr}
                   </div>
                   <div>
-                    <div className="text-[#F5EFE8] font-bold text-sm">{brand.name}</div>
-                    <div className="text-[#B9A99D] text-xs">{brand.note}</div>
+                    <div className="text-[#111111] font-bold text-sm">{brand.name}</div>
+                    <div className="text-[#5C5C5C] text-xs">{brand.note}</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="text-[#B9A99D] text-xs font-mono">→</div>
+                  <div className="text-[#5C5C5C] text-xs font-mono">→</div>
                   <div
                     className="w-12 h-10 rounded-xl flex items-center justify-center font-display font-black text-base"
                     style={{

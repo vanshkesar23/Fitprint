@@ -7,17 +7,17 @@
 /* FitPrint — editorial fashion system */
 
 :root {
-  --bg-primary: #120E0C;
+  --bg-primary: #FFFFFF;
   --bg-secondary: #1C1714;
-  --surface-card: #26201C;
-  --surface-elevated: #332923;
-  --color-primary: #F5EFE8;
-  --color-secondary: #B9A99D;
-  --color-gold: #C49A6C;
-  --color-tan: #8B6F47;
-  --glass-bg: #2A201C;
-  --glass-border: rgba(196, 154, 108, 0.18);
-  --glass-border-hover: rgba(196, 154, 108, 0.5);
+  --surface-card: #F4F2EE;
+  --surface-elevated: #EAE7E1;
+  --color-primary: #111111;
+  --color-secondary: #5C5C5C;
+  --color-gold: #111111;
+  --color-tan: #555555;
+  --glass-bg: #FFFFFF;
+  --glass-border: rgba(0, 0, 0, 0.18);
+  --glass-border-hover: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -61,37 +61,37 @@ h1, h2, h3, h4, h5 {
 
 /* Rich Dark Brown Card */
 .glass-card {
-  background: #2A201C;
-  border: 1px solid rgba(196, 154, 108, 0.18);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(196, 154, 108, 0.5);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(196, 154, 108, 0.2);
+  border-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Gold Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #F5EFE8 0%, #C49A6C 50%, #9C735D 100%);
+  background: linear-gradient(135deg, #111111 0%, #111111 50%, #777777 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-vc {
-  background: linear-gradient(90deg, #F5EFE8 0%, #C49A6C 100%);
+  background: linear-gradient(90deg, #111111 0%, #111111 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Primary Button - Warm Gold (#C49A6C → #9C735D) */
+/* Primary Button - Warm Gold (#111111 → #777777) */
 .btn-primary {
-  background: linear-gradient(135deg, #C49A6C 0%, #9C735D 100%);
-  color: #120E0C;
-  border: 1px solid rgba(196, 154, 108, 0.4);
+  background: linear-gradient(135deg, #111111 0%, #777777 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -100,16 +100,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #F5EFE8 0%, #C49A6C 100%);
-  box-shadow: 0 8px 30px rgba(196, 154, 108, 0.4);
+  background: linear-gradient(135deg, #111111 0%, #111111 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 
 /* Secondary Button - Transparent Dark Brown */
 .btn-ghost {
-  background: #1E1714;
-  border: 1px solid rgba(196, 154, 108, 0.25);
-  color: #F5EFE8;
+  background: #F4F2EE;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  color: #111111;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -118,28 +118,28 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-ghost:hover {
-  border-color: #C49A6C;
-  background: #2A201C;
+  border-color: #111111;
+  background: #FFFFFF;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Input styles */
 .input-glass {
-  background: #1E1714;
-  border: 1px solid rgba(196, 154, 108, 0.25);
-  color: #F5EFE8;
+  background: #F4F2EE;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  color: #111111;
   transition: all 0.3s ease;
   outline: none;
 }
 
 .input-glass:focus {
-  border-color: #C49A6C;
-  box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.2);
-  background: #2A201C;
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
 }
 
 .input-glass::placeholder {
-  color: #B9A99D;
+  color: #5C5C5C;
 }
 
 /* Animated background gradient - Deep Espresso */
@@ -150,23 +150,23 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: radial-gradient(ellipse at 20% 20%, rgba(196, 154, 108, 0.12) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 80%, rgba(156, 115, 93, 0.08) 0%, transparent 50%),
-              #120E0C;
+  background: radial-gradient(ellipse at 20% 20%, rgba(0, 0, 0, 0.12) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 80%, rgba(0, 0, 0, 0.08) 0%, transparent 50%),
+              #FFFFFF;
 }
 
 /* Grid background */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(196, 154, 108, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(196, 154, 108, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 /* Loading spinner */
 .spinner {
-  border: 2px solid rgba(196, 154, 108, 0.3);
-  border-top: 2px solid #C49A6C;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top: 2px solid #111111;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -198,29 +198,29 @@ h1, h2, h3, h4, h5 {
   height: 4px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: rgba(196, 154, 108, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
 /* Badge styles */
 .badge-neon {
-  background: rgba(196, 154, 108, 0.15);
-  border: 1px solid rgba(196, 154, 108, 0.35);
-  color: #F5EFE8;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  color: #111111;
 }
 
 .shadow-glow {
-  box-shadow: 0 0 25px rgba(196, 154, 108, 0.3);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 
 /* Editorial fashion polish */
-::selection { background: #C49A6C; color: #120E0C; }
+::selection { background: #111111; color: #FFFFFF; }
 a { text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 .glass-card { border-radius: 1rem; box-shadow: 0 10px 35px rgba(0,0,0,.28); }
 .glass-card:hover { box-shadow: 0 18px 45px rgba(0,0,0,.38); }
-.btn-primary { background: #C49A6C; color: #120E0C; box-shadow: none; border-radius: .65rem; }
-.btn-primary:hover { background: #E1C39A; box-shadow: 0 8px 24px rgba(196,154,108,.22); }
+.btn-primary { background: #111111; color: #FFFFFF; box-shadow: none; border-radius: .65rem; }
+.btn-primary:hover { background: #E1C39A; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
 .btn-ghost { background: transparent; border-color: rgba(245,239,232,.25); }
-.btn-ghost:hover { background: #26201C; border-color: #C49A6C; }
+.btn-ghost:hover { background: #F4F2EE; border-color: #111111; }
