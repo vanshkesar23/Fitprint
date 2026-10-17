@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, LogOut, User, ChevronDown } from 'lucide-react';
+import { Menu, X, LogOut, User, ChevronDown, Zap } from 'lucide-react';
 import { useFitPrint } from '@/lib/context';
 
 const navLinks = [
@@ -159,7 +159,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(v => !v)}
-            className="lg:hidden p-2 rounded-lg text-white/60 hover:text-white transition-colors hover:bg-white/[0.06]"
+            className="lg:hidden p-2 rounded-lg text-black/60 hover:text-white transition-colors hover:bg-white/[0.06]"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -176,8 +176,8 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="fixed inset-x-4 top-20 z-40 rounded-2xl p-5 space-y-2"
             style={{
-              background: 'rgba(5,5,16,0.97)',
-              border: '1px solid rgba(108,99,255,0.25)',
+              background: 'rgba(255,255,255,0.97)',
+              border: '1px solid rgba(0,0,0,0.18)',
               backdropFilter: 'blur(24px)',
               boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
             }}
@@ -192,7 +192,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/[0.06] transition-all"
+                  className="block px-4 py-3 rounded-xl text-sm font-medium text-black/70 hover:text-white hover:bg-white/[0.06] transition-all"
                 >
                   {link.label}
                 </Link>
@@ -201,7 +201,7 @@ export default function Navbar() {
             <hr className="border-white/10" />
             {user ? (
               <>
-                <div className="px-4 py-2 text-white/40 text-xs font-mono">{user.fitprintId} · {user.name}</div>
+                <div className="px-4 py-2 text-black/40 text-xs font-mono">{user.fitprintId} · {user.name}</div>
                 <button onClick={() => { handleLogout(); setMobileOpen(false); }}
                   className="w-full text-left px-4 py-3 rounded-xl text-sm text-red-400/70 hover:text-red-400 hover:bg-red-500/[0.06] transition-all flex items-center gap-2">
                   <LogOut className="w-4 h-4" /> Sign Out
