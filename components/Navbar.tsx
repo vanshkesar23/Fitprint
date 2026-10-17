@@ -53,17 +53,17 @@ export default function Navbar() {
           style={{
             background: 'rgba(30, 23, 20, 0.92)',
             backdropFilter: 'blur(20px)',
-            border: '1px solid rgba(196, 154, 108, 0.25)',
+            border: '1px solid rgba(0, 0, 0, 0.25)',
             boxShadow: '0 8px 30px rgba(0, 0, 0, 0.6)',
           }}
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-[#C49A6C] flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-[#120E0C] font-black text-sm">FP</span>
+            <div className="w-8 h-8 rounded-lg bg-[#111111] flex items-center justify-center transition-transform group-hover:scale-105">
+              <span className="text-[#FFFFFF] font-black text-sm">FP</span>
             </div>
-            <span className="font-display font-black tracking-tight text-lg text-[#F5EFE8] uppercase">
-              Fit<span className="text-[#C49A6C]">Print</span>
+            <span className="font-display font-black tracking-tight text-lg text-[#111111] uppercase">
+              Fit<span className="text-[#111111]">Print</span>
             </span>
           </Link>
 
@@ -77,8 +77,8 @@ export default function Navbar() {
                   href={link.href}
                   className="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-200 relative"
                   style={isActive
-                    ? { color: '#C49A6C', borderBottom: '2px solid #C49A6C' }
-                    : { color: '#B9A99D' }
+                    ? { color: '#111111', borderBottom: '2px solid #111111' }
+                    : { color: '#5C5C5C' }
                   }
                 >
                   {link.label}
@@ -94,13 +94,13 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setUserMenuOpen(v => !v)}
-                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl transition-all duration-200 bg-[#2A201C] border border-[#C49A6C]/40 hover:border-[#C49A6C] cursor-pointer"
+                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl transition-all duration-200 bg-[#FFFFFF] border border-[#111111]/40 hover:border-[#111111] cursor-pointer"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-[#C49A6C] flex items-center justify-center text-xs font-black text-[#120E0C]">
+                  <div className="w-7 h-7 rounded-lg bg-[#111111] flex items-center justify-center text-xs font-black text-[#FFFFFF]">
                     {user.name[0]?.toUpperCase() || 'U'}
                   </div>
-                  <span className="text-[#F5EFE8] text-xs font-bold font-mono">{user.name}</span>
-                  <ChevronDown className="w-3.5 h-3.5 text-[#C49A6C]" />
+                  <span className="text-[#111111] text-xs font-bold font-mono">{user.name}</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-[#111111]" />
                 </button>
 
                 <AnimatePresence>
@@ -110,29 +110,29 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.95 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute right-0 top-full mt-2 w-52 rounded-2xl p-2 z-50 bg-[#1E1714] border border-[#C49A6C]/40 shadow-2xl space-y-1"
+                      className="absolute right-0 top-full mt-2 w-52 rounded-2xl p-2 z-50 bg-[#F4F2EE] border border-[#111111]/40 shadow-2xl space-y-1"
                     >
-                      <div className="px-3 py-2 border-b border-[rgba(196,154,108,0.15)] mb-1">
-                        <div className="text-[#F5EFE8] text-xs font-bold">{user.name}</div>
-                        <div className="text-[#B9A99D] text-[10px] font-mono">{user.email || user.fitprintId}</div>
+                      <div className="px-3 py-2 border-b border-[rgba(0,0,0,0.15)] mb-1">
+                        <div className="text-[#111111] text-xs font-bold">{user.name}</div>
+                        <div className="text-[#5C5C5C] text-[10px] font-mono">{user.email || user.fitprintId}</div>
                       </div>
 
                       <Link href="/profile" onClick={() => setUserMenuOpen(false)}
-                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#F5EFE8] hover:bg-[#2A201C] hover:text-[#C49A6C] transition-all">
-                        <User className="w-4 h-4 text-[#C49A6C]" /> Profile
+                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#111111] hover:bg-[#FFFFFF] hover:text-[#111111] transition-all">
+                        <User className="w-4 h-4 text-[#111111]" /> Profile
                       </Link>
 
                       <Link href="/dashboard" onClick={() => setUserMenuOpen(false)}
-                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#F5EFE8] hover:bg-[#2A201C] hover:text-[#C49A6C] transition-all">
-                        <Zap className="w-4 h-4 text-[#C49A6C]" /> My FitPrint
+                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#111111] hover:bg-[#FFFFFF] hover:text-[#111111] transition-all">
+                        <Zap className="w-4 h-4 text-[#111111]" /> My FitPrint
                       </Link>
 
                       <button onClick={() => { setUserMenuOpen(false); alert('Settings menu opened.'); }}
-                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#F5EFE8] hover:bg-[#2A201C] hover:text-[#C49A6C] transition-all cursor-pointer">
-                        <ChevronDown className="w-4 h-4 text-[#C49A6C]" /> Settings
+                        className="flex items-center gap-2.5 w-full px-3 py-2 rounded-xl text-xs font-semibold text-[#111111] hover:bg-[#FFFFFF] hover:text-[#111111] transition-all cursor-pointer">
+                        <ChevronDown className="w-4 h-4 text-[#111111]" /> Settings
                       </button>
 
-                      <div className="pt-1 border-t border-[rgba(196,154,108,0.15)]">
+                      <div className="pt-1 border-t border-[rgba(0,0,0,0.15)]">
                         <button onClick={handleLogout}
                           className="flex items-center justify-between w-full px-3 py-2.5 rounded-xl text-xs font-bold text-red-400 hover:bg-red-950/40 transition-all cursor-pointer">
                           <span className="flex items-center gap-2">
