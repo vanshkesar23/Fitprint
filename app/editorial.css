@@ -111,13 +111,13 @@ main > div > section:first-child .inline-flex.rounded-full {
   background: transparent !important;
   border-color: rgba(255,255,255,.24) !important;
 }
-main > div > section:first-child .relative.h-\\[520px\\] {
+main > div > section:first-child [class*="h-[520px]"] {
   min-height: 520px;
   border: 1px solid rgba(255,255,255,.13);
   background: #111;
   overflow: hidden;
 }
-main > div > section:first-child .relative.h-\\[520px\\]::before {
+main > div > section:first-child [class*="h-[520px]"]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -129,9 +129,9 @@ main > div > section:first-child .relative.h-\\[520px\\]::before {
   opacity: .76;
   transform: scale(1.02);
 }
-main > div > section:first-child .relative.h-\\[520px\\] canvas,
-main > div > section:first-child .relative.h-\\[520px\\] > div { position: relative; z-index: 1; }
-main > div > section:first-child .relative.h-\\[520px\\] canvas { mix-blend-mode: screen; opacity: .82; }
+main > div > section:first-child [class*="h-[520px]"] canvas,
+main > div > section:first-child [class*="h-[520px]"] > div { position: relative; z-index: 1; }
+main > div > section:first-child [class*="h-[520px]"] canvas { mix-blend-mode: screen; opacity: .82; }
 main > div > section:first-child .btn-primary,
 main > div > section:first-child .btn-ghost { min-height: 3.2rem; padding-inline: 1.6rem !important; }
 main > div > section:first-child .border-t { border-color: rgba(255,255,255,.18) !important; }
@@ -151,12 +151,12 @@ footer [class*="text-[#C49A6C]"] { color: #d5d5d0 !important; }
 @media (max-width: 1023px) {
   main > div > section:first-child { min-height: auto !important; padding-top: 8rem !important; }
   main > div > section:first-child h1 { font-size: clamp(3.5rem, 11vw, 6.5rem) !important; max-width: 10ch !important; }
-  main > div > section:first-child .relative.h-\\[520px\\] { min-height: 420px; height: 420px !important; }
+  main > div > section:first-child [class*="h-[520px]"] { min-height: 420px; height: 420px !important; }
 }
 @media (max-width: 640px) {
   main > div > section:first-child { padding-top: 7rem !important; }
   main > div > section:first-child h1 { font-size: clamp(3.1rem, 14vw, 4.8rem) !important; }
-  main > div > section:first-child .relative.h-\\[520px\\] { min-height: 360px; height: 360px !important; }
+  main > div > section:first-child [class*="h-[520px]"] { min-height: 360px; height: 360px !important; }
   main > div > section:first-child .btn-primary, main > div > section:first-child .btn-ghost { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
