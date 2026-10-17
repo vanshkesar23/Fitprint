@@ -1,0 +1,164 @@
+/* FitPrint editorial campaign skin — layered over existing app styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+  --surface-card: #141414;
+  --surface-elevated: #1b1b1b;
+  --color-primary: #f5f5f2;
+  --color-secondary: #a5a5a0;
+  --color-gold: #d5d5d0;
+  --color-tan: #8e8e89;
+  --glass-bg: rgba(17,17,17,.82);
+  --glass-border: rgba(255,255,255,.14);
+  --glass-border-hover: rgba(255,255,255,.42);
+}
+
+html, body {
+  background: #080808 !important;
+  color: #f5f5f2 !important;
+  font-family: 'Manrope', sans-serif !important;
+}
+body {
+  background-image: radial-gradient(ellipse at 78% 22%, rgba(255,255,255,.055), transparent 34rem) !important;
+}
+h1, h2, h3, h4, h5 { font-family: 'Manrope', sans-serif !important; }
+::selection { background: #f5f5f2 !important; color: #080808 !important; }
+
+/* Translate the existing warm palette into monochrome without changing app logic. */
+[class*="text-[#C49A6C]"], [class*="text-[#8B6F47]"], [class*="text-[#A05A42]"],
+[class*="text-[#B08A5A]"], [class*="text-[#9C735D]"], [class*="text-[#D69A4D]"],
+[class*="text-[#B9A99D]"] { color: #b8b8b2 !important; }
+[class*="bg-[#120E0C]"], [class*="bg-[#1E1714]"], [class*="bg-[#2A201C]"],
+[class*="bg-[#26201C]"] { background-color: #101010 !important; }
+[class*="border-[#C49A6C]"], [class*="border-[rgba(196,154,108"], [class*="border-[#8B6F47]"] {
+  border-color: rgba(255,255,255,.18) !important;
+}
+[class*="from-[#C49A6C]"], [class*="to-[#9C735D]"] { --tw-gradient-from: #deded8 var(--tw-gradient-from-position) !important; --tw-gradient-to: #777772 var(--tw-gradient-to-position) !important; }
+.gradient-text, .gradient-text-vc {
+  background-image: linear-gradient(110deg, #fff 0%, #c9c9c4 55%, #858580 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.btn-primary {
+  color: #080808 !important;
+  background: #f0f0ec !important;
+  border: 1px solid rgba(255,255,255,.8) !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover { background: #cfcfca !important; transform: translateY(-2px); }
+.btn-ghost {
+  background: rgba(255,255,255,.025) !important;
+  border: 1px solid rgba(255,255,255,.24) !important;
+  border-radius: 999px !important;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,.72) !important; background: rgba(255,255,255,.07) !important; }
+.glass-card {
+  background: linear-gradient(145deg, rgba(25,25,25,.94), rgba(10,10,10,.96)) !important;
+  border: 1px solid rgba(255,255,255,.13) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 18px 60px rgba(0,0,0,.28) !important;
+  backdrop-filter: blur(18px);
+}
+.glass-card:hover {
+  border-color: rgba(255,255,255,.38) !important;
+  box-shadow: 0 22px 70px rgba(0,0,0,.48) !important;
+}
+.input-glass { background: #101010 !important; border-color: rgba(255,255,255,.2) !important; }
+.input-glass:focus { border-color: #f5f5f2 !important; box-shadow: 0 0 0 3px rgba(255,255,255,.08) !important; }
+.animated-bg {
+  background: radial-gradient(ellipse at 78% 12%, rgba(255,255,255,.045), transparent 40rem), #080808 !important;
+}
+::-webkit-scrollbar-thumb { background: #666 !important; }
+
+/* Minimal floating navigation, like an editorial fashion studio. */
+header.fixed > div {
+  background: rgba(8,8,8,.76) !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 14px 44px rgba(0,0,0,.32) !important;
+  backdrop-filter: blur(24px) saturate(115%) !important;
+}
+header.fixed nav a { letter-spacing: .12em; text-transform: uppercase; font-size: 10px !important; }
+
+/* Hero: oversized campaign typography with a monochrome fashion-image stage. */
+main > div > section:first-child {
+  min-height: min(940px, 100svh) !important;
+  padding-top: clamp(7rem, 11vh, 9rem) !important;
+  padding-bottom: clamp(3rem, 6vh, 5rem) !important;
+  background: #080808 !important;
+  isolation: isolate;
+}
+main > div > section:first-child > div {
+  max-width: 1440px !important;
+  gap: clamp(1.5rem, 4vw, 4rem) !important;
+}
+main > div > section:first-child h1 {
+  font-size: clamp(3.6rem, 7.2vw, 8.2rem) !important;
+  line-height: .82 !important;
+  letter-spacing: -.085em !important;
+  font-weight: 800 !important;
+  max-width: 8.5ch !important;
+  text-wrap: balance;
+}
+main > div > section:first-child h1 .gradient-text { background-image: linear-gradient(100deg,#fff 0%,#bdbdb7 100%) !important; }
+main > div > section:first-child p { color: #a5a5a0 !important; max-width: 30rem !important; }
+main > div > section:first-child .inline-flex.rounded-full {
+  border-radius: 0 !important;
+  background: transparent !important;
+  border-color: rgba(255,255,255,.24) !important;
+}
+main > div > section:first-child [class*="h-[520px]"] {
+  min-height: 520px;
+  border: 1px solid rgba(255,255,255,.13);
+  background: #111;
+  overflow: hidden;
+}
+main > div > section:first-child [class*="h-[520px]"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.48)),
+    url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85') center 28% / cover;
+  filter: grayscale(1) contrast(1.06);
+  opacity: .76;
+  transform: scale(1.02);
+}
+main > div > section:first-child [class*="h-[520px]"] canvas,
+main > div > section:first-child [class*="h-[520px]"] > div { position: relative; z-index: 1; }
+main > div > section:first-child [class*="h-[520px]"] canvas { mix-blend-mode: screen; opacity: .82; }
+main > div > section:first-child .btn-primary,
+main > div > section:first-child .btn-ghost { min-height: 3.2rem; padding-inline: 1.6rem !important; }
+main > div > section:first-child .border-t { border-color: rgba(255,255,255,.18) !important; }
+
+/* Editorial section headings, fine rules, and quiet motion. */
+section { scroll-margin-top: 6rem; }
+section h2 { letter-spacing: -.055em !important; }
+section .font-mono { font-family: 'DM Mono', monospace !important; }
+section .border-y, footer { border-color: rgba(255,255,255,.14) !important; }
+footer { background: #0b0b0b !important; }
+footer [class*="text-[#C49A6C]"] { color: #d5d5d0 !important; }
+
+@media (min-width: 1024px) {
+  main > div > section:first-child > div > div:first-child { padding-block: 2rem; }
+  main > div > section:first-child > div > div:last-child { transform: translateY(1rem); }
+}
+@media (max-width: 1023px) {
+  main > div > section:first-child { min-height: auto !important; padding-top: 8rem !important; }
+  main > div > section:first-child h1 { font-size: clamp(3.5rem, 11vw, 6.5rem) !important; max-width: 10ch !important; }
+  main > div > section:first-child [class*="h-[520px]"] { min-height: 420px; height: 420px !important; }
+}
+@media (max-width: 640px) {
+  main > div > section:first-child { padding-top: 7rem !important; }
+  main > div > section:first-child h1 { font-size: clamp(3.1rem, 14vw, 4.8rem) !important; }
+  main > div > section:first-child [class*="h-[520px]"] { min-height: 360px; height: 360px !important; }
+  main > div > section:first-child .btn-primary, main > div > section:first-child .btn-ghost { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
