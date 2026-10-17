@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './editorial.css';
 import { FitPrintProvider } from '@/lib/context';
 import Navbar from '@/components/Navbar';
 import ParticleField from '@/components/ParticleField';
